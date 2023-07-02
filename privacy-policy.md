@@ -1,4 +1,4 @@
-# Privacy Policy for browser-extension-template
+# Privacy Policy
 
 No data or personal information is collected by Typemoji.
 
