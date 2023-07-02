@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"scripts": {
-		"build": "parcel build source/manifest.json --no-content-hash --no-source-maps --dist-dir distribution --no-cache --detailed-report 0",
+		"build": "parcel build source/content.js --dist-dir source",
 		"lint": "run-p lint:*",
 		"lint-fix": "run-p 'lint:* -- --fix'",
 		"lint:css": "stylelint source/**/*.css",
@@ -23,6 +23,9 @@
 		"extends": "stylelint-config-xo"
 	},
 	"dependencies": {
+		"emoji-dictionary": "^1.0.11",
+		"emoji-from-word": "^1.2.12",
+		"emojilib": "^3.0.10",
 		"webext-base-css": "^1.4.1",
 		"webext-options-sync": "^3.1.0"
 	},
@@ -42,8 +45,24 @@
 			]
 		}
 	},
- 	"@parcel/bundler-default-bug": "https://github.com/parcel-bundler/parcel/issues/8071",
- 	"@parcel/bundler-default": {
- 		"minBundles": 10000000
- 	}
+	"@parcel/bundler-default-bug": "https://github.com/parcel-bundler/parcel/issues/8071",
+	"@parcel/bundler-default": {
+		"minBundles": 10000000
+	},
+	"name": "typemoji",
+	"description": "An emoji typing tool to make emoji inputs faster and easier.",
+	"version": "1.0.0",
+	"main": "content.js",
+	"type": "module",
+	"repository": {
+		"type": "module",
+		"url": "git+https://github.com/AG6789/typemoji.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/AG6789/typemoji/issues"
+	},
+	"homepage": "https://github.com/AG6789/typemoji#readme"
 }
