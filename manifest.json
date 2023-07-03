@@ -1,34 +1,34 @@
 {
-	"name": "Typemoji",
-	"version": "1.0.0",
-	"description": "An emoji typing tool to make emoji inputs faster and easier.",
-	"homepage_url": "https://github.com/AG6789",
-	"manifest_version": 3,
-	"minimum_chrome_version": "100",
-	"icons": {
-		"128": "128.png"
-	},
+  "name": "Typemoji",
+  "version": "1.0.0",
+  "description": "An emoji typing tool to make emoji inputs faster and easier.",
+  "homepage_url": "https://github.com/AG6789",
+  "manifest_version": 3,
+  "minimum_chrome_version": "100",
+  "icons": {
+    "128": "source/128.png"
+  },
 
-	"action": {
-		"default_popup": "options.html"
-	},
+  "action": {
+    "default_popup": "source/options.html"
+  },
 
-	"permissions": ["storage"],
-	"host_permissions": ["https://github.com/*"],
-	"content_scripts": [
-		{
-			"matches": ["*://*/*"],
-			"js": ["content.js"],
-			"css": ["content.css"],
-			"run_at": "document_end"
-		}
-	],
-	"options_ui": {
-		"browser_style": true,
-		"page": "options.html"
-	},
-	"background": {
-		"service_worker": "background.js",
-		"type": "module"
-	}
+  "permissions": ["storage"],
+  "host_permissions": ["https://github.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["source/content.js"],
+      "css": ["source/content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_ui": {
+    "browser_style": true,
+    "page": "source/options.html"
+  },
+  "background": {
+    "service_worker": "source/background.js",
+    "type": "module"
+  }
 }
