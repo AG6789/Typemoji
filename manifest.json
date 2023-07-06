@@ -13,8 +13,7 @@
     "default_popup": "source/options.html"
   },
 
-  "permissions": ["storage"],
-  "host_permissions": ["https://github.com/*"],
+  "permissions": [],
   "content_scripts": [
     {
       "matches": ["*://*/*"],
